@@ -266,37 +266,6 @@ function play(guild, song) {
 
 
 
-client.on('guildMemberAdd', member => {
-    var embed = new Discord.RichEmbed()
-    .setAuthor(member.user.username, member.user.avatarURL)
-    .setThumbnail(member.user.avatarURL)
-    .setTitle(`عضو جديد`)
-    .setDescription(`اهلا بك في السيرفر`)
-    .addField(' :bust_in_silhouette:  انت رقم',`**[ ${member.guild.memberCount} ]**`,true)
-    .setColor('GREEN')
-    .setFooter('DraGoN_star', 'https://images-ext-1.discordapp.net/external/opcM8g1nFldo0MHHBkvn7dv0dkIQqnMEQEFs0M_itWI/%3Fsize%3D128/https/cdn.discordapp.com/avatars/478121089201864705/5be5f4bae34c1026e224cd1572c6d141.jpg')
-
-var channel =member.guild.channels.find('name', '『𝐖𝐄𝐋𝐂𝐎𝐌𝐄』')
-if (!channel) return;
-channel.send({embed : embed});
-});
-
-
-
-client.on('guildMemberRemove', member => {
-    var embed = new Discord.RichEmbed()
-    .setAuthor(member.user.username, member.user.avatarURL)
-    .setThumbnail(member.user.avatarURL)
-    .setTitle(`خرج عضو`)
-    .setDescription(`الى اللقاء...`)
-    .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-    .setColor('RED')
-    .setFooter(`DraGoN_star`, 'https://images-ext-1.discordapp.net/external/opcM8g1nFldo0MHHBkvn7dv0dkIQqnMEQEFs0M_itWI/%3Fsize%3D128/https/cdn.discordapp.com/avatars/478121089201864705/5be5f4bae34c1026e224cd1572c6d141.jpg')
-1
-var channel =member.guild.channels.find('name', '『𝐖𝐄𝐋𝐂𝐎𝐌𝐄』')
-if (!channel) return;
-channel.send({embed : embed});
-});
 
 
 
