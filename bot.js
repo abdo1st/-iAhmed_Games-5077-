@@ -358,7 +358,7 @@ client.on('message',function(message) {
 
                   if(!message.channel.guild) return;
 
-                    if (message.content === prefix + "الاعضاء") {
+                    if (message.content === prefix + "member") {
  const embed = new Discord.RichEmbed()
 
     .setDescription(`**Members info ✨
