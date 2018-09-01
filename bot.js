@@ -22,7 +22,7 @@ const client = new Discord.Client({disableEveryone: true}); //نزل كل الب
 //
 ///
 
-const prefix = '!'; //حط البرفكس اللي تبيه
+const prefix = '!d'; //حط البرفكس اللي تبيه
 //توكن بوتك لا تنسى تحطه باخر سطر
 client.on('ready', function() {
     console.log(`${client.user.username} is running...`);
@@ -271,7 +271,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-var prefix = "!";
+var prefix = "!d";
 
     if (message.author.id === client.user.id) return;
     if (message.guild) {
@@ -303,7 +303,7 @@ return;
 
 
 client.on("message", msg => {
-  if(msg.content === '!' + "id") {
+  if(msg.content === '!d' + "id") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -401,7 +401,7 @@ client.on('message', message => {
 
 
 client.on('message' , message => {
-  var prefix = "!";
+  var prefix = "!d";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "ping")) {
  message.channel.send('Pong...').then((msg) => {
@@ -413,7 +413,7 @@ client.on('message' , message => {
 
 client.on('message', message =>{
     let args = message.content.split(' ');
-    let prefix = '!'; //تقدر تغير البرفكس
+    let prefix = '!d'; //تقدر تغير البرفكس
     
     if(args[0] === `${prefix}avatar`){
         let mentions = message.mentions.members.first()
