@@ -1,16 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
 
 
 
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Abdo1#4651`,"http://twitch.tv/S-F")
+client.user.setGame(`+help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -36,7 +33,7 @@ client.user.setGame(`Abdo1#4651`,"http://twitch.tv/S-F")
 
 
 client.on('message', message => {
-var prefix = "$";
+var prefix = "+";
 
     if (message.author.id === client.user.id) return;
     if (message.guild) {
