@@ -8,6 +8,8 @@ const fetchVideoInfo = require('youtube-info');//npm i youtube-info
 
 const YouTube = require('simple-youtube-api');//npm i simple-youtube-api
 
+const moment = require('moment');
+
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8"); //ما تغير هذا 
 
 const queue = new Map();
@@ -265,11 +267,6 @@ function play(guild, song) {
 
 
 
-
-
-
-
-
 client.on('message', message => {
 var prefix = "+";
 
@@ -375,42 +372,6 @@ client.on('message', message => {
     }
 });
 
-
-
-client.on('message' , message => {
-  var prefix = "+";
-  if(message.author.bot) return;
-  if(message.content.startsWith(prefix + "ping")) {
- message.channel.send('Pong...').then((msg) => {
-      msg.edit(`\`\`\`javascript\nTime taken: ${msg.createdTimestamp - message.createdTimestamp} ms.\nDiscord API: ${Math.round(client.ping)} ms.\`\`\``);
- })
-  }  
- });
-
-
-client.on('message', message =>{
-    let args = message.content.split(' ');
-    let prefix = '+'; //تقدر تغير البرفكس
-    
-    if(args[0] === `${prefix}avatar`){
-        let mentions = message.mentions.members.first()
-        if(!mentions) {
-          let sicon = message.author.avatarURL
-          let embed = new Discord.RichEmbed()
-          .setImage(message.author.avatarURL)
-          .setColor("#f7abab") 
-          .setDescription(`**${message.author.username}#${message.author.discriminator}**'s avatar :`);
-          message.channel.send({embed})
-        } else {
-          let sicon = mentions.user.avatarURL
-          let embed = new Discord.RichEmbed()
-          .setColor("#f7abab")
-          .setDescription(`**${mentions.user.username}#${mentions.user.discriminator}**'s avatar :`)
-          .setImage(sicon)
-          message.channel.send({embed})
-        }
-    };
-});
 
 
 client.login(process.env.BOT_TOKEN);
