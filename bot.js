@@ -22,7 +22,7 @@ const client = new Discord.Client({disableEveryone: true}); //نزل كل الب
 //
 ///
 
-const prefix = '!d'; //حط البرفكس اللي تبيه
+const prefix = '+'; //حط البرفكس اللي تبيه
 //توكن بوتك لا تنسى تحطه باخر سطر
 client.on('ready', function() {
     console.log(`${client.user.username} is running...`);
@@ -271,7 +271,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-var prefix = "!d";
+var prefix = "+";
 
     if (message.author.id === client.user.id) return;
     if (message.guild) {
@@ -303,7 +303,7 @@ return;
 
 
 client.on("message", msg => {
-  if(msg.content === '!d' + "id") {
+  if(msg.content === '!d' + "+") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -355,32 +355,26 @@ client.on('message', message => {
 
  message.author.sendMessage(`
  **
- ╭━━━╮╱╱╱╱╱╱╱╱╭╮╱╱╱╱╭╮
-╰╮╭╮┃╱╱╱╱╱╱╱╱┃┃╱╱╱╭╯╰╮
-╱┃┃┃┣━━┳━━┳━━┫╰━┳━┻╮╭╯
-╱┃┃┃┃┃━┫━━┫╭╮┃╭╮┃╭╮┃┃
-╭╯╰╯┃┃━╋━━┃╰╯┃╰╯┃╰╯┃╰╮
-╰━━━┻━━┻━━┫╭━┻━━┻━━┻━╯
-╱╱╱╱╱╱╱╱╱╱┃┃
-╱╱╱╱╱╱╱╱╱╱╰╯
+ 
 
 
 ╔[❖════════════❖]╗
-             Prefix = ' ! '
+             Prefix = ' + '
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
             الاوامر العامة
 ╚[❖════════════❖]╝
 
+❖ +bc ➾ رسالة جماعية
 
-❖ !members ➾ معلومات الاعضاء
+❖ +members ➾ معلومات الاعضاء
 
-❖ !ping ➾ لمعرفة سرعة الاتصال
+❖ +ping ➾ لمعرفة سرعة الاتصال
 
-❖ !avatar ➾ لعرض صورة الحساب
+❖ +avatar ➾ لعرض صورة الحساب
 
-❖ !id ➾ معلومات حسابك
+❖ +id ➾ معلومات حسابك
 
 ╔[❖════════════❖]╗
             اوامر الاغاني
@@ -401,7 +395,7 @@ client.on('message', message => {
 
 
 client.on('message' , message => {
-  var prefix = "!d";
+  var prefix = "+";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "ping")) {
  message.channel.send('Pong...').then((msg) => {
@@ -413,7 +407,7 @@ client.on('message' , message => {
 
 client.on('message', message =>{
     let args = message.content.split(' ');
-    let prefix = '!d'; //تقدر تغير البرفكس
+    let prefix = '+'; //تقدر تغير البرفكس
     
     if(args[0] === `${prefix}avatar`){
         let mentions = message.mentions.members.first()
