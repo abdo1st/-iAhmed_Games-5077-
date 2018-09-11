@@ -65,7 +65,7 @@ return;
 
 client.on('message', message => {
   if (true) {
-if (message.content === '$بوت') {
+if (message.content === '+بوت') {
       message.author.send('  https://discordapp.com/api/oauth2/authorize?client_id=488850031571369995&permissions=8&scope=bot  |  اتفضل رابط البوت     ').catch(e => console.log(e.stack));
  
     }
