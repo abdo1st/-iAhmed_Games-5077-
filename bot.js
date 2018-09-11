@@ -130,7 +130,7 @@ client.on('message', message =>{
     let args = message.content.split(' ');
     let prefix = '+'; //تقدر تغير البرفكس
     
-    if(args[0] === `${prefix}الصورة الشخصية`){
+    if(args[0] === `${prefix}avatar`){
         let mentions = message.mentions.members.first()
         if(!mentions) {
           let sicon = message.author.avatarURL
@@ -181,8 +181,6 @@ client.on('message', message => {
 ❖ +bc ➾ رسالة جماعية
 
 ❖ +members ➾ معلومات الاعضاء
-
-❖ +ping ➾ لمعرفة سرعة الاتصال
 
 ❖ +avatar ➾ لعرض صورة الحساب
 
